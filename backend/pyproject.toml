@@ -2,7 +2,7 @@
 name = "twitter-clone"
 version = "0.1.0"
 description = ""
-authors = ["Analice <analice.leite12@gmail.com>"]
+authors = ["Goodgd <dionatha.work@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
