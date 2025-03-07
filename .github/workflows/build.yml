@@ -26,7 +26,7 @@ jobs:
 
       # Executar migrações usando Poetry
       - name: Run backend migrations
-        run: docker compose exec -T backend poetry run python manage.py migrate
+        run: docker compose exec -T web sh -c "poetry run python manage.py migrate"
 
       # Executar testes do backend usando Poetry
       - name: Run backend tests
