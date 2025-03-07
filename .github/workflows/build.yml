@@ -30,7 +30,7 @@ jobs:
 
       # Executar testes do backend usando Poetry
       - name: Run backend tests
-        run: docker compose exec -T backend poetry run python manage.py test
+        run: docker compose exec -T web sh -c "poetry run python manage.py test"
 
       # Executar testes do frontend
       - name: Run frontend tests
