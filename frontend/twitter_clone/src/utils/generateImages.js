@@ -1,10 +1,10 @@
 import CryptoJS from 'crypto-js';
 
 export const getAvatar = (email) => {
-    const hash = CryptoJS.MD5(email.trim().toLowerCase())
-    return `https://www.gravatar.com/avatar/${ hash }?s=40&d=identicon`;
+    return `https://robohash.org/${email.trim().toLowerCase()}?set=set4&size=40x40`;
 }
 
 export const getRandomImage = () => {
-    return `https://picsum.photos/600/400?random=${Math.random()}`
+    const accessKey = 'your-unsplash-api-access-key';
+    return `https://api.unsplash.com/photos/random?client_id=${accessKey}&w=600&h=400`;
 }
