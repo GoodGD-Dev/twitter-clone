@@ -1,4 +1,4 @@
-version: '3.8'  # ou uma versão mais recente, mas não obsoleta
+version: "3.8"
 
 services:
   db:
@@ -29,7 +29,7 @@ services:
     ports:
       - 8000:8000
     env_file:
-      - ./backend/.env.dev  
+      - ./backend/.env.dev
     networks:
       - backend
     depends_on:
@@ -44,12 +44,12 @@ services:
   frontend:
     build: ./frontend/twitter_clone
     ports:
-      - 3000:3000  
+      - 3000:3000
     networks:
       - frontend
-    command: npm start  
+    command: npm start
     depends_on:
-      - web  # Espera o backend ficar pronto
+      - web # Espera o backend ficar pronto
 
 networks:
   backend:
