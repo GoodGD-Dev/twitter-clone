@@ -21,9 +21,8 @@ INSTALLED_APPS = [
 ]
 ```
 
-## Criando Projeto Vite Typescript
+## Criando
 ```bash
-npm create vite@latest frontend --template vue
 npm i
 npm install styled-components
 pip install django-cors-headers
