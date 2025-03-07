@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'tweets',                
     'notifications',          
     'follows',       
-    'login'        
+    'login',        
 ]
 
 
