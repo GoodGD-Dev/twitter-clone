@@ -65,6 +65,6 @@ jobs:
       - name: Build and push frontend
         uses: docker/build-push-action@v4
         with:
-          context: ./frontend/twitter-clone
+          context: ./frontend/twitter_clone
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/react-frontend:latest
