@@ -1,35 +1,52 @@
-# Twitter clone - Projeto final Ebac Fullstack python
+# Guia de Configuração
 
-## Instalação
+## Executando com Docker Compose
+
+1. **Clonar o repositório**
 ```bash
-django-admin startproject myproject
-cd myproject
-django-admin startapp myapp
-python manage.py runserver
+    git clone git@github.com:GoodGD-Dev/twitter-clone.git
+    cd twitterclone
 ```
-
-## Config
+3. **Construir e executar containers**
 ```bash
-pip install djangorestframework
+    docker-compose up --build
 ```
+4. **Acessar a aplicação**
+Acesse a aplicação em `http://localhost:8000`.
 
-Na configuração do Django, adicione nas settings:
-```python
-INSTALLED_APPS = [
-    # ...
-    'rest_framework',
-]
-```
+## Configurando `serverbackend` com Poetry
 
-## Criando
+1. **Instalar dependências com Poetry**
 ```bash
-npm i
-npm install styled-components
-pip install django-cors-headers
-python manage.py createsuperuser
+    cd backend
+    poetry install
 ```
 
-### PARA HOSPEDAGEM
+2. **Executar migrações e migrations**
 ```bash
-npm run build
+    poetry run python manage.py makemigrations
+    poetry run python manage.py migrate
 ```
+
+4. **Iniciar o servidor**
+```bash
+    poetry run python manage.py runserver
+```
+
+## Configurando o Frontend com npm
+
+1. **Instalar dependências**
+```bash
+    cd ..
+    cd frontend
+    npm install
+```
+
+3. **Iniciar o servidor de desenvolvimento**
+```bash
+    npm start
+```
+
+5. **Acessar o frontend**
+Acesse o frontend em `http://localhost:3000`
+
