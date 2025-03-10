@@ -29,7 +29,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'twitter-clone-6q12.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = ['twitter-clone-6q12.onrender.com']
+CSRF_TRUSTED_ORIGINS = [
+    "https://twitter-clone-6q12.onrender.com"
+]
+
 
 # Application definition
 
