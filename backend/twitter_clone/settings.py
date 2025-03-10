@@ -25,10 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure--ugz-#nh+d2^b)w%1__l0aio%du4a!ydsuq4_uoy+jhi#w5b9j"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://seu-backend.onrender.com']
 
 # Application definition
 
@@ -121,18 +122,7 @@ WSGI_APPLICATION = "twitter_clone.wsgi.application"
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": os.getenv('POSTGRES_DB', 'twitter_db'),  
-#         "USER": os.getenv('POSTGRES_USER', 'twitter_user'), 
-#         "PASSWORD": os.getenv('POSTGRES_PASSWORD', 'twitter_password'),  
-#         "HOST": os.getenv('POSTGRES_HOST', 'localhost'),  
-#         "PORT": os.getenv('POSTGRES_PORT', '5433'), 
-#     }
-# }
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATABASES = {
     "default": {
